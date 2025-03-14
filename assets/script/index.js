@@ -26,6 +26,7 @@ let orderTotalAmount = document.querySelector(".orderTotalAmount");
 let confirmedTotal = document.querySelector(".confirmedTotal");
 let counter = [];
 let tempTotal = [];
+let totalQuti = [];
 
 cartBtns.forEach((cartBtn, index) => {
   tempTotal[index] = 0;
@@ -40,8 +41,11 @@ cartBtns.forEach((cartBtn, index) => {
     tempTotal[index] += Number(itemTotalPrice[index].innerText);
     orderTotalAmount.innerText =
       Number(orderTotalAmount.innerText) + Number(tempTotal[index]);
-    confirmOrder.classList.remove("hidden");
 
+    totalQuti[index] = counter[index];
+    quantity.innerText = Number(quantity.innerText) + Number(totalQuti[index]);
+
+    confirmOrder.classList.remove("hidden");
     confirmOrder.addEventListener("click", () => {
       modal.classList.remove("hidden");
       modal.showModal();
@@ -62,7 +66,6 @@ cartBtns.forEach((cartBtn, index) => {
 
 increase.forEach((inc, index) => {
   counter[index] = 1;
-  // ;
   inc.addEventListener("click", () => {
     counter[index]++;
     cartQuantity[index].innerText = counter[index];
@@ -71,6 +74,8 @@ increase.forEach((inc, index) => {
       quti[index].innerText * itemUnitPrice[index].innerText;
     orderTotalAmount.innerText =
       Number(orderTotalAmount.innerText) + Number(tempTotal[index]);
+
+    quantity.innerText = Number(quantity.innerText) + Number(totalQuti[index]);
   });
 });
 
@@ -84,6 +89,9 @@ decrease.forEach((dec, index) => {
         quti[index].innerText * itemUnitPrice[index].innerText;
       orderTotalAmount.innerText =
         Number(orderTotalAmount.innerText) - Number(tempTotal[index]);
+
+      quantity.innerText =
+        Number(quantity.innerText) - Number(totalQuti[index]);
     }
   });
 });
