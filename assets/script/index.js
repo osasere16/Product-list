@@ -21,6 +21,7 @@ const yourOrders = document.querySelectorAll(".yourOrders");
 const qtyConfirmed = document.querySelectorAll(".qtyConfirmed");
 const sum = document.querySelectorAll(".sum");
 const newOrder = document.querySelector(".newOrder");
+let quantity = document.querySelector(".quantity");
 let orderTotalAmount = document.querySelector(".orderTotalAmount");
 let confirmedTotal = document.querySelector(".confirmedTotal");
 let counter = [];
@@ -45,7 +46,12 @@ cartBtns.forEach((cartBtn, index) => {
       modal.classList.remove("hidden");
       modal.showModal();
       yourOrders.forEach((yourOrder) => {
-        orderedCart[index] && yourOrders[index].classList.remove("hidden");
+        if (orderedCart[index].classList.contains("hidden")) {
+          yourOrders[index].classList.add("hidden");
+        } else {
+          orderedCart[index] && yourOrders[index].classList.remove("hidden");
+        }
+
         qtyConfirmed[index].innerText = quti[index].innerText;
         sum[index].innerText = itemTotalPrice[index].innerText;
       });
@@ -107,13 +113,12 @@ removeIcon.forEach((remove, index) => {
 });
 
 newOrder.addEventListener("click", () => {
-  modal.close();
-  modal.classList.add("hidden");
   cartBtns.forEach((cartBtn, index) => {
     cartBtn.classList.remove("hidden");
     images[index].classList.remove("border");
     cartNums[index].classList.add("hidden");
     orderedCart[index].classList.add("hidden");
+    yourOrders[index].classList.add("hidden");
     orderTotalAmount.innerText = 0;
     tempTotal[index] = 0;
     counter[index] = 1;
@@ -121,13 +126,13 @@ newOrder.addEventListener("click", () => {
     quti[index].innerText = cartQuantity[index].innerText;
     itemTotalPrice[index].innerText =
       quti[index].innerText * itemUnitPrice[index].innerText;
-    if (orderTotalAmount.innerText === "0") {
-      orderTotal.classList.add("hidden");
-      carbonNeutral.classList.add("hidden");
-      confirmOrder.classList.add("hidden");
-      emptyOrder.classList.remove("hidden");
-    }
+    orderTotal.classList.add("hidden");
+    carbonNeutral.classList.add("hidden");
+    confirmOrder.classList.add("hidden");
+    emptyOrder.classList.remove("hidden");
   });
+  modal.close();
+  modal.classList.add("hidden");
 });
 
 modal.addEventListener("keyup", (e) => {
@@ -139,6 +144,7 @@ modal.addEventListener("keyup", (e) => {
       images[index].classList.remove("border");
       cartNums[index].classList.add("hidden");
       orderedCart[index].classList.add("hidden");
+      yourOrders[index].classList.add("hidden");
       orderTotalAmount.innerText = 0;
       tempTotal[index] = 0;
       counter[index] = 1;
