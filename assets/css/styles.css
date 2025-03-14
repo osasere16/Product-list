@@ -92,8 +92,8 @@ select {
   --rose-900: hsl(14, 65%, 9%);
 
   /* typography */
-  --ff-primary: ;
-  --fs-primary: 1rem;
+  --ff-primary: "Red Hat Text", sans-serif;
+  --fs-primary: var(--spacer-100);
   --fw-regular: 400;
   --fw-bold: 600;
   --fw--black: 700;
@@ -106,6 +106,13 @@ select {
 }
 
 /* GENERAL STYLE */
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-primary);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
 
 main {
   z-index: 23;
@@ -251,10 +258,14 @@ main {
   min-height: 100svh;
   min-width: 100svw;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(0.5px);
+  background: none;
   border: none;
   outline: none;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(0.5px);
 }
 
 .orderConfirmation {
@@ -274,7 +285,7 @@ main {
 .arrange {
   align-items: center;
   justify-content: space-between;
-  gap: var(--spacer-100);
+  gap: calc(var(--spacer-100) / 2);
 }
 
 .confirmedArrangement2 {
