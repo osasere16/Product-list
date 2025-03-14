@@ -98,6 +98,8 @@ decrease.forEach((dec, index) => {
 
 removeIcon.forEach((remove, index) => {
   remove.addEventListener("click", () => {
+    quantity.innerText =
+      Number(quantity.innerText) - Number(quti[index].innerText);
     cartBtns[index].classList.remove("hidden");
     images[index].classList.remove("border");
     cartNums[index].classList.add("hidden");
@@ -111,11 +113,13 @@ removeIcon.forEach((remove, index) => {
     quti[index].innerText = cartQuantity[index].innerText;
     itemTotalPrice[index].innerText =
       quti[index].innerText * itemUnitPrice[index].innerText;
+
     if (orderTotalAmount.innerText === "0") {
       orderTotal.classList.add("hidden");
       carbonNeutral.classList.add("hidden");
       confirmOrder.classList.add("hidden");
       emptyOrder.classList.remove("hidden");
+      quantity.innerText = 0;
     }
   });
 });
@@ -141,6 +145,7 @@ newOrder.addEventListener("click", () => {
   });
   modal.close();
   modal.classList.add("hidden");
+  quantity.innerText = 0;
 });
 
 modal.addEventListener("keyup", (e) => {
@@ -160,12 +165,12 @@ modal.addEventListener("keyup", (e) => {
       quti[index].innerText = cartQuantity[index].innerText;
       itemTotalPrice[index].innerText =
         quti[index].innerText * itemUnitPrice[index].innerText;
-      if (orderTotalAmount.innerText === "0") {
-        orderTotal.classList.add("hidden");
-        carbonNeutral.classList.add("hidden");
-        confirmOrder.classList.add("hidden");
-        emptyOrder.classList.remove("hidden");
-      }
+
+      orderTotal.classList.add("hidden");
+      carbonNeutral.classList.add("hidden");
+      confirmOrder.classList.add("hidden");
+      emptyOrder.classList.remove("hidden");
+      quantity.innerText = 0;
     });
   }
 });
