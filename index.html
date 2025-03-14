@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Frontend Mentor | Product list with cart</title>
+  </head>
+  <body class="d-grid">
+    <main class="flow-content d-grid">
+      <div class="dessertItems flow-content d-grid">
+        <div class="dessertItemsHeader"><h1>Desserts</h1></div>
+
+        <!-- item 1 -->
+        <div class="dessertWaffles flow-contentSmall">
+          <div class="group d-flex">
+            <div class="dessertWaffles__image">
+              <img
+                src="assets/images/image-waffle-mobile.jpg"
+                alt="waffles image"
+                class="image"
+              />
+            </div>
+            <div class="cart d-flex">
+              <img
+                src="assets/images/icon-add-to-cart.svg"
+                alt="add cart icon"
+              />
+              <p>Add to Cart</p>
+            </div>
+            <div class="cart2 d-flex cartNum hidden">
+              <div class="decreament d-flex">
+                <img
+                  src="assets/images/icon-decrement-quantity.svg"
+                  alt="decreament icon"
+                />
+              </div>
+              <p class="cartQuantity">1</p>
+              <div class="increament d-flex">
+                <img
+                  src="assets/images/icon-increment-quantity.svg"
+                  alt="increament icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="roseText">Waffle</p>
+            <h4>Waffle with Berries</h4>
+            <h4 class="orangeText">$6.50</h4>
+          </div>
+        </div>
+
+        <!-- item 2 -->
+        <div class="dessertCremeBrulee flow-contentSmall">
+          <div class="group d-flex">
+            <div class="dessertCreme__image">
+              <img
+                src="assets/images/image-creme-brulee-mobile.jpg"
+                alt="creme brulee image"
+                class="image"
+              />
+            </div>
+            <div class="cart d-flex">
+              <img
+                src="assets/images/icon-add-to-cart.svg"
+                alt="add cart icon"
+              />
+              <p>Add to Cart</p>
+            </div>
+            <div class="cart2 d-flex cartNum hidden">
+              <div class="decreament d-flex">
+                <img
+                  src="assets/images/icon-decrement-quantity.svg"
+                  alt="decreament icon"
+                />
+              </div>
+              <p class="cartQuantity">1</p>
+              <div class="increament d-flex">
+                <img
+                  src="assets/images/icon-increment-quantity.svg"
+                  alt="increament icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="roseText">Crème Brûlée</p>
+            <h4>Vanilla Bean Crème Brûlée</h4>
+            <h4 class="orangeText">$7.00</h4>
+          </div>
+        </div>
+
+        <!-- item 3 -->
+        <div class="dessertMacaron flow-contentSmall">
+          <div class="group d-flex">
+            <div class="dessertMAcaron__image">
+              <img
+                src="assets/images/image-macaron-mobile.jpg"
+                alt="macaron image"
+                class="image"
+              />
+            </div>
+            <div class="cart d-flex">
+              <img
+                src="assets/images/icon-add-to-cart.svg"
+                alt="add cart icon"
+              />
+              <p>Add to Cart</p>
+            </div>
+            <div class="cart2 d-flex cartNum hidden">
+              <div class="decreament d-flex">
+                <img
+                  src="assets/images/icon-decrement-quantity.svg"
+                  alt="decreament icon"
+                />
+              </div>
+              <p class="cartQuantity">1</p>
+              <div class="increament d-flex">
+                <img
+                  src="assets/images/icon-increment-quantity.svg"
+                  alt="increament icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="roseText">Macaron</p>
+            <h4>Macaron Mix of Five</h4>
+            <h4 class="orangeText">$8.00</h4>
+          </div>
+        </div>
+
+        <!-- item 4 -->
+        <div class="dessertTiramisu flow-contentSmall">
+          <div class="group d-flex">
+            <div class="dessertTiramisu__image">
+              <img
+                src="assets/images/image-tiramisu-mobile.jpg"
+                alt="tiramisu image"
+                class="image"
+              />
+            </div>
+            <div class="cart d-flex">
+              <img
+                src="assets/images/icon-add-to-cart.svg"
+                alt="add cart icon"
+              />
+              <p>Add to Cart</p>
+            </div>
+            <div class="cart2 d-flex cartNum hidden">
+              <div class="decreament d-flex">
+                <img
+                  src="assets/images/icon-decrement-quantity.svg"
+                  alt="decreament icon"
+                />
+              </div>
+              <p class="cartQuantity">1</p>
+              <div class="increament d-flex">
+                <img
+                  src="assets/images/icon-increment-quantity.svg"
+                  alt="increament icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="roseText">Tiramisu</p>
+            <h4>Classic Tiramisu</h4>
+            <h4 class="orangeText">$5.50</h4>
+          </div>
+        </div>
+
+        <!-- item 5 -->
+        <div class="dessertBaklava flow-contentSmall">
+          <div class="group d-flex">
+            <div class="dessertBaklava__image">
+              <img
+                src="assets/images/image-baklava-mobile.jpg"
+                alt="baklava image"
+                class="image"
+              />
+            </div>
+            <div class="cart d-flex">
+              <img
+                src="assets/images/icon-add-to-cart.svg"
+                alt="add cart icon"
+              />
+              <p>Add to Cart</p>
+            </div>
+            <div class="cart2 d-flex cartNum hidden">
+              <div class="decreament d-flex">
+                <img
+                  src="assets/images/icon-decrement-quantity.svg"
+                  alt="decreament icon"
+                />
+              </div>
+              <p class="cartQuantity">1</p>
+              <div class="increament d-flex">
+                <img
+                  src="assets/images/icon-increment-quantity.svg"
+                  alt="increament icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="roseText">Baklava</p>
+            <h4>Pistachio Baklava</h4>
+            <h4 class="orangeText">$4.00</h4>
+          </div>
+        </div>
+
+        <!-- item 6 -->
+        <div class="dessertMeringue flow-contentSmall">
+          <div class="group d-flex">
+            <div class="dessertMeringue__image">
+              <img
+                src="assets/images/image-meringue-mobile.jpg"
+                alt="Meringue image"
+                class="image"
+              />
+            </div>
+            <div class="cart d-flex">
+              <img
+                src="assets/images/icon-add-to-cart.svg"
+                alt="add cart icon"
+              />
+              <p>Add to Cart</p>
+            </div>
+            <div class="cart2 d-flex cartNum hidden">
+              <div class="decreament d-flex">
+                <img
+                  src="assets/images/icon-decrement-quantity.svg"
+                  alt="decreament icon"
+                />
+              </div>
+              <p class="cartQuantity">1</p>
+              <div class="increament d-flex">
+                <img
+                  src="assets/images/icon-increment-quantity.svg"
+                  alt="increament icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="roseText">Pie</p>
+            <h4>Lemon Meringue Pie</h4>
+            <h4 class="orangeText">$5.00</h4>
+          </div>
+        </div>
+
+        <!-- item 7 -->
+        <div class="dessertCake flow-contentSmall">
+          <div class="group d-flex">
+            <div class="dessertCake__image">
+              <img
+                src="assets/images/image-cake-mobile.jpg"
+                alt="cake image"
+                class="image"
+              />
+            </div>
+            <div class="cart d-flex">
+              <img
+                src="assets/images/icon-add-to-cart.svg"
+                alt="add cart icon"
+              />
+              <p>Add to Cart</p>
+            </div>
+            <div class="cart2 d-flex cartNum hidden">
+              <div class="decreament d-flex">
+                <img
+                  src="assets/images/icon-decrement-quantity.svg"
+                  alt="decreament icon"
+                />
+              </div>
+              <p class="cartQuantity">1</p>
+              <div class="increament d-flex">
+                <img
+                  src="assets/images/icon-increment-quantity.svg"
+                  alt="increament icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="roseText">Cake</p>
+            <h4>Red Velvet Cake</h4>
+            <h4 class="orangeText">$4.50</h4>
+          </div>
+        </div>
+
+        <!-- item 8 -->
+        <div class="dessertBrownie flow-contentSmall">
+          <div class="group d-flex">
+            <div class="dessertBrownie__image">
+              <img
+                src="assets/images/image-brownie-mobile.jpg"
+                alt="brownie image"
+                class="image"
+              />
+            </div>
+            <div class="cart d-flex">
+              <img
+                src="assets/images/icon-add-to-cart.svg"
+                alt="add cart icon"
+              />
+              <p>Add to Cart</p>
+            </div>
+            <div class="cart2 d-flex cartNum hidden">
+              <div class="decreament d-flex">
+                <img
+                  src="assets/images/icon-decrement-quantity.svg"
+                  alt="decreament icon"
+                />
+              </div>
+              <p class="cartQuantity">1</p>
+              <div class="increament d-flex">
+                <img
+                  src="assets/images/icon-increment-quantity.svg"
+                  alt="increament icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="roseText">Brownie</p>
+            <h4>Salted Caramel Brownie</h4>
+            <h4 class="orangeText">$5.50</h4>
+          </div>
+        </div>
+
+        <!-- item 9 -->
+        <div class="dessertPanna flow-contentSmall">
+          <div class="group d-flex">
+            <div class="dessertPanna__image">
+              <img
+                src="assets/images/image-panna-cotta-mobile.jpg"
+                alt="panna image"
+                class="image"
+              />
+            </div>
+            <div class="cart d-flex">
+              <img
+                src="assets/images/icon-add-to-cart.svg"
+                alt="add cart icon"
+              />
+              <p>Add to Cart</p>
+            </div>
+            <div class="cart2 d-flex cartNum hidden">
+              <div class="decreament d-flex">
+                <img
+                  src="assets/images/icon-decrement-quantity.svg"
+                  alt="decreament icon"
+                />
+              </div>
+              <p class="cartQuantity">1</p>
+              <div class="increament d-flex">
+                <img
+                  src="assets/images/icon-increment-quantity.svg"
+                  alt="increament icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="roseText">Panna Cotta</p>
+            <h4>Vanilla Panna Cotta</h4>
+            <h4 class="orangeText">$6.50</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- cart -->
+      <div class="yourOrder flow-content">
+        <h2 class="yourCartHeader">
+          Your Cart (<span class="quantity">0</span>)
+        </h2>
+        <div class="flow-contentSmall">
+          <!-- cart order1-->
+          <div class="waffle flow-contentSmall hidden orderedCart">
+            <div class="d-flex cartArrangement1">
+              <div>
+                <p>Waffles with Berries</p>
+                <div class="d-flex cartArrangement2">
+                  <p class="quantityColor">
+                    <span class="waffleQuti Quti">1</span>x
+                  </p>
+                  <p>@ $ <span class="itemUnitPrice">6.50</span></p>
+                  <p>$<span class="itemTotalPrice">6.50</span></p>
+                </div>
+              </div>
+              <div class="removeIcon d-flex">
+                <img
+                  src="assets/images/icon-remove-item.svg"
+                  alt="remove item icon"
+                />
+              </div>
+            </div>
+            <div class="horzontalLine"></div>
+          </div>
+          <!-- cart two -->
+          <div class="creme flow-contentSmall hidden orderedCart">
+            <div class="d-flex cartArrangement1">
+              <div>
+                <p>Vanilla Bean Crème Brûlée</p>
+                <div class="d-flex cartArrangement2">
+                  <p class="quantityColor">
+                    <span class="cremeQuti Quti">1</span>x
+                  </p>
+                  <p>@ $ <span class="itemUnitPrice">7.00</span></p>
+                  <p>$ <span class="itemTotalPrice">7.00</span></p>
+                </div>
+              </div>
+              <div class="removeIcon d-flex">
+                <img
+                  src="assets/images/icon-remove-item.svg"
+                  alt="remove item icon"
+                />
+              </div>
+            </div>
+            <div class="horzontalLine"></div>
+          </div>
+          <!-- cart order3 -->
+          <div class="macaron flow-contentSmall hidden orderedCart">
+            <div class="d-flex cartArrangement1">
+              <div>
+                <p>Macaroon Mix of Five</p>
+                <div class="d-flex cartArrangement2">
+                  <p class="quantityColor">
+                    <span class="macaronQuti Quti">1</span>x
+                  </p>
+                  <p>@ $ <span class="itemUnitPrice">8.00</span></p>
+                  <p>$<span class="itemTotalPrice">8.00</span></p>
+                </div>
+              </div>
+              <div class="removeIcon d-flex">
+                <img
+                  src="assets/images/icon-remove-item.svg"
+                  alt="remove item icon"
+                />
+              </div>
+            </div>
+            <div class="horzontalLine"></div>
+          </div>
+          <!-- cart order4 -->
+          <div class="tiramisu flow-contentSmall hidden orderedCart">
+            <div class="d-flex cartArrangement1">
+              <div>
+                <p>Classic Tiramisu</p>
+                <div class="d-flex cartArrangement2">
+                  <p class="quantityColor">
+                    <span class="tiramisuQuti Quti">1</span>x
+                  </p>
+                  <p>@ $ <span class="itemUnitPrice">5.50</span></p>
+                  <p>$ <span class="itemTotalPrice">5.50</span></p>
+                </div>
+              </div>
+              <div class="removeIcon d-flex">
+                <img
+                  src="assets/images/icon-remove-item.svg"
+                  alt="remove item icon"
+                />
+              </div>
+            </div>
+            <div class="horzontalLine"></div>
+          </div>
+          <!-- cart order5 -->
+          <div class="baklava flow-contentSmall hidden orderedCart">
+            <div class="d-flex cartArrangement1">
+              <div>
+                <p>Pistachio Baklava</p>
+                <div class="d-flex cartArrangement2">
+                  <p class="quantityColor">
+                    <span class="baklavaQuti Quti">1</span>x
+                  </p>
+                  <p>@ $ <span class="itemUnitPrice">4.00</span></p>
+                  <p>$<span class="itemTotalPrice">4.00</span></p>
+                </div>
+              </div>
+              <div class="removeIcon d-flex">
+                <img
+                  src="assets/images/icon-remove-item.svg"
+                  alt="remove item icon"
+                />
+              </div>
+            </div>
+            <div class="horzontalLine"></div>
+          </div>
+          <!-- cart order6 -->
+          <div class="pie flow-contentSmall hidden orderedCart">
+            <div class="d-flex cartArrangement1">
+              <div>
+                <p>Lemon Meringue Pie</p>
+                <div class="d-flex cartArrangement2">
+                  <p class="quantityColor">
+                    <span class="pieQuti Quti">1</span>x
+                  </p>
+                  <p>@ $ <span class="itemUnitPrice">5.00</span></p>
+                  <p>$ <span class="itemTotalPrice">5.00</span></p>
+                </div>
+              </div>
+              <div class="removeIcon d-flex">
+                <img
+                  src="assets/images/icon-remove-item.svg"
+                  alt="remove item icon"
+                />
+              </div>
+            </div>
+            <div class="horzontalLine"></div>
+          </div>
+          <!-- cart order7 -->
+          <div class="cake flow-contentSmall hidden orderedCart">
+            <div class="d-flex cartArrangement1">
+              <div>
+                <p>Red Velvet Cake</p>
+                <div class="d-flex cartArrangement2">
+                  <p class="quantityColor">
+                    <span class="cakeQuti Quti">1</span>x
+                  </p>
+                  <p>@ $ <span class="itemUnitPrice">4.50</span></p>
+                  <p>$<span class="itemTotalPrice">4.50</span></p>
+                </div>
+              </div>
+              <div class="removeIcon d-flex">
+                <img
+                  src="assets/images/icon-remove-item.svg"
+                  alt="remove item icon"
+                />
+              </div>
+            </div>
+            <div class="horzontalLine"></div>
+          </div>
+          <!-- cart order8 -->
+          <div class="brownie flow-contentSmall hidden orderedCart">
+            <div class="d-flex cartArrangement1">
+              <div>
+                <p>Salted Caramel Brownie</p>
+                <div class="d-flex cartArrangement2">
+                  <p class="quantityColor">
+                    <span class="brownieQuti Quti">1</span>x
+                  </p>
+                  <p>@ $ <span class="itemUnitPrice">5.50</span></p>
+                  <p>$ <span class="itemTotalPrice">5.50</span></p>
+                </div>
+              </div>
+              <div class="removeIcon d-flex">
+                <img
+                  src="assets/images/icon-remove-item.svg"
+                  alt="remove item icon"
+                />
+              </div>
+            </div>
+            <div class="horzontalLine"></div>
+          </div>
+          <!-- cart order9 -->
+          <div class="panna flow-contentSmall hidden orderedCart">
+            <div class="d-flex cartArrangement1">
+              <div>
+                <p>Vannila Panna Cotta</p>
+                <div class="d-flex cartArrangement2">
+                  <p class="quantityColor">
+                    <span class="pannaQuti Quti">1</span>x
+                  </p>
+                  <p>@ $ <span class="itemUnitPrice">6.50</span></p>
+                  <p>$ <span class="itemTotalPrice">6.50</span></p>
+                </div>
+              </div>
+              <div class="removeIcon d-flex">
+                <img
+                  src="assets/images/icon-remove-item.svg"
+                  alt="remove item icon"
+                />
+              </div>
+            </div>
+            <div class="horzontalLine"></div>
+          </div>
+
+          <!-- Order Total -->
+
+          <div class="orderTotal d-flex hidden">
+            <p>Order Total</p>
+            <h2>$ <span class="orderTotalAmount"></span></h2>
+          </div>
+
+          <!-- carbon Neutral -->
+
+          <div class="carbonNeutral d-flex hidden">
+            <img
+              src="assets/images/icon-carbon-neutral.svg"
+              alt="carbon neutral icon"
+            />
+            <p>This is a <strong>carbon-neutral</strong> delivery</p>
+          </div>
+
+          <!-- confirmOrder Button -->
+
+          <div class="confirmBtn confirmOrder d-flex hidden">Confirm Order</div>
+        </div>
+        <div class="emptyOrder">
+          <img
+            src="assets/images/illustration-empty-cart.svg"
+            alt="Empty Cart"
+          />
+          <p>Your added items will appear here</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+
+    <dialog class="modal hidden d-flex">
+      <!-- confirmation section -->
+
+      <div class="orderConfirmation flow-content">
+        <div>
+          <img
+            src="assets/images/icon-order-confirmed.svg"
+            alt="order Confirmation icon"
+          />
+        </div>
+        <div class="flow-contentSmall">
+          <h1>
+            Order <br />
+            Confirmed
+          </h1>
+          <p class="ConfirmationUnitPrice">We hope you enjoy your food!</p>
+        </div>
+        <div class="confirmedOrder flow-contentSmall">
+          <!-- one -->
+          <div class="cartArrangement1 yourOrders hidden">
+            <div class="d-flex arrange">
+              <div class="d-flex confirmedArrangement2">
+                <div>
+                  <img
+                    src="assets/images/image-waffle-thumbnail.jpg"
+                    alt="waffle"
+                    class="confirmationImage"
+                  />
+                </div>
+                <div class="flow-contentSmall">
+                  <p>Waffle with Berries</p>
+                  <div class="d-flex gap">
+                    <p class="quantityColor">
+                      <span class="qtyConfirmed">1</span>x
+                    </p>
+                    <p class="ConfirmationUnitPrice">@ $6.50</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>$ <span class="sum">5.50</span></p>
+              </div>
+            </div>
+            <div class="horizontalLine02"></div>
+          </div>
+          <!-- two -->
+          <div class="cartArrangement1 yourOrders hidden">
+            <div class="d-flex arrange">
+              <div class="d-flex confirmedArrangement2">
+                <div>
+                  <img
+                    src="assets/images/image-creme-brulee-thumbnail.jpg"
+                    alt="creme brulee"
+                    class="confirmationImage"
+                  />
+                </div>
+                <div class="flow-contentSmall">
+                  <p>Vanilla Bean Creme Brulee</p>
+                  <div class="d-flex gap">
+                    <p class="quantityColor">
+                      <span class="qtyConfirmed">1</span>x
+                    </p>
+                    <p class="ConfirmationUnitPrice">@ $7.50</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>$ <span class="sum">5.50</span></p>
+              </div>
+            </div>
+            <div class="horizontalLine02"></div>
+          </div>
+          <!-- three -->
+          <div class="cartArrangement1 yourOrders hidden">
+            <div class="d-flex arrange">
+              <div class="d-flex confirmedArrangement2">
+                <div>
+                  <img
+                    src="assets/images/image-macaron-thumbnail.jpg"
+                    alt="macaron"
+                    class="confirmationImage"
+                  />
+                </div>
+                <div class="flow-contentSmall">
+                  <p>Macaron Mix of Five</p>
+                  <div class="d-flex gap">
+                    <p class="quantityColor">
+                      <span class="qtyConfirmed">1</span>x
+                    </p>
+                    <p class="ConfirmationUnitPrice">@ $8.00</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>$ <span class="sum">5.50</span></p>
+              </div>
+            </div>
+            <div class="horizontalLine02"></div>
+          </div>
+          <!-- four -->
+          <div class="cartArrangement1 yourOrders hidden">
+            <div class="d-flex arrange">
+              <div class="d-flex confirmedArrangement2">
+                <div>
+                  <img
+                    src="assets/images/image-tiramisu-thumbnail.jpg"
+                    alt="tiramisu"
+                    class="confirmationImage"
+                  />
+                </div>
+                <div class="flow-contentSmall">
+                  <p>Classic Tiramisu</p>
+                  <div class="d-flex gap">
+                    <p class="quantityColor">
+                      <span class="qtyConfirmed">1</span>x
+                    </p>
+                    <p class="ConfirmationUnitPrice">@ $5.50</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>$ <span class="sum">5.50</span></p>
+              </div>
+            </div>
+            <div class="horizontalLine02"></div>
+          </div>
+          <!-- five -->
+          <div class="cartArrangement1 yourOrders hidden">
+            <div class="d-flex arrange">
+              <div class="d-flex confirmedArrangement2">
+                <div>
+                  <img
+                    src="assets/images/image-baklava-thumbnail.jpg"
+                    alt="baklava"
+                    class="confirmationImage"
+                  />
+                </div>
+                <div class="flow-contentSmall">
+                  <p>Pistachio Baklava</p>
+                  <div class="d-flex gap">
+                    <p class="quantityColor">
+                      <span class="qtyConfirmed">1</span>x
+                    </p>
+                    <p class="ConfirmationUnitPrice">@ $7.50</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>$ <span class="sum">5.50</span></p>
+              </div>
+            </div>
+            <div class="horizontalLine02"></div>
+          </div>
+          <!-- six -->
+          <div class="cartArrangement1 yourOrders hidden">
+            <div class="d-flex arrange">
+              <div class="d-flex confirmedArrangement2">
+                <div>
+                  <img
+                    src="assets/images/image-meringue-thumbnail.jpg"
+                    alt="pie"
+                    class="confirmationImage"
+                  />
+                </div>
+                <div class="flow-contentSmall">
+                  <p>Lemon Meringue Pie</p>
+                  <div class="d-flex gap">
+                    <p class="quantityColor">
+                      <span class="qtyConfirmed">1</span>x
+                    </p>
+                    <p class="ConfirmationUnitPrice">@ $7.50</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>$ <span class="sum">5.50</span></p>
+              </div>
+            </div>
+            <div class="horizontalLine02"></div>
+          </div>
+          <!-- seven -->
+          <div class="cartArrangement1 yourOrders hidden">
+            <div class="d-flex arrange">
+              <div class="d-flex confirmedArrangement2">
+                <div>
+                  <img
+                    src="assets/images/image-cake-thumbnail.jpg"
+                    alt="cake"
+                    class="confirmationImage"
+                  />
+                </div>
+                <div class="flow-contentSmall">
+                  <p>Red Velvet Cake</p>
+                  <div class="d-flex gap">
+                    <p class="quantityColor">
+                      <span class="qtyConfirmed">1</span>x
+                    </p>
+                    <p class="ConfirmationUnitPrice">@ $4.50</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>$ <span class="sum">5.50</span></p>
+              </div>
+            </div>
+            <div class="horizontalLine02"></div>
+          </div>
+          <!-- eight -->
+          <div class="cartArrangement1 yourOrders hidden">
+            <div class="d-flex arrange">
+              <div class="d-flex confirmedArrangement2">
+                <div>
+                  <img
+                    src="assets/images/image-brownie-thumbnail.jpg"
+                    alt="brownie"
+                    class="confirmationImage"
+                  />
+                </div>
+                <div class="flow-contentSmall">
+                  <p>Salted Caramel Brownie</p>
+                  <div class="d-flex gap">
+                    <p class="quantityColor">
+                      <span class="qtyConfirmed">1</span>x
+                    </p>
+                    <p class="ConfirmationUnitPrice">@ $5.50</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>$ <span class="sum">5.50</span></p>
+              </div>
+            </div>
+            <div class="horizontalLine02"></div>
+          </div>
+          <!-- nine -->
+          <div class="cartArrangement1 yourOrders hidden">
+            <div class="d-flex arrange">
+              <div class="d-flex confirmedArrangement2">
+                <div>
+                  <img
+                    src="assets/images/image-panna-cotta-thumbnail.jpg"
+                    alt="panna cotta"
+                    class="confirmationImage"
+                  />
+                </div>
+                <div class="flow-contentSmall">
+                  <p>Vanilla Panna Cotta</p>
+                  <div class="d-flex gap">
+                    <p class="quantityColor">
+                      <span class="qtyConfirmed">1</span>x
+                    </p>
+                    <p class="ConfirmationUnitPrice">@ $7.50</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>$ <span class="sum">5.50</span></p>
+              </div>
+            </div>
+            <div class="horizontalLine02"></div>
+          </div>
+          <!-- Total Confirmed -->
+          <div class="d-flex orderTotal">
+            <p class="ConfirmationUnitPrice">Order Total</p>
+            <h2>
+              $ <span class="orderTotalAmount confirmedTotal">46.50</span>
+            </h2>
+          </div>
+        </div>
+        <div class="confirmBtn newOrder d-flex">Start New Order</div>
+      </div>
+    </dialog>
+    <!--  -->
+
+    <div class="attribution d-flex">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <br />
+      <a href="#">shadrachosasere16@gmail.com</a>.
+    </div>
+
+    <script src="assets/script/index.js"></script>
+  </body>
+</html>
