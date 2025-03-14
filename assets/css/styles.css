@@ -244,8 +244,8 @@ main {
 
 .attribution {
   color: var(--rose-500);
-  font-size: 12px;
-  justify-content: center;
+  font-size: 11px;
+  text-align: center;
 }
 
 .attribution a {
